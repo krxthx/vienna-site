@@ -1,0 +1,77 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ink-950: #05070d;
+  --color-ink-900: #0a0e18;
+  --color-ink-800: #101624;
+  --color-line: rgba(160, 190, 230, 0.12);
+  --color-line-strong: rgba(160, 190, 230, 0.24);
+  --color-mist: #9aa7bd;
+  --color-snow: #e9eef7;
+  --color-signal: #2cc4de;
+  --color-signal-dim: #1b7f92;
+  --color-amber: #e8a66a;
+  --font-display: 'Avenir Next', 'Helvetica Neue', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
+  --color-ink-950: #f4f7fc;
+  --color-ink-900: #ffffff;
+  --color-ink-800: #e6ecf5;
+  --color-line: rgba(15, 35, 70, 0.12);
+  --color-line-strong: rgba(15, 35, 70, 0.28);
+  --color-mist: #4b5a72;
+  --color-snow: #0b1220;
+  --color-signal: #0a7f96;
+  --color-signal-dim: #0a7f96;
+  --color-amber: #a8561a;
+}
+
+.logo-dark {
+  display: none;
+}
+
+html[data-theme='light'] .logo-dark {
+  display: block;
+}
+
+html[data-theme='light'] .logo-light {
+  display: none;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink-950);
+  color: var(--color-snow);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(var(--color-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 70% 30%, #000 0%, transparent 75%);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-signal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
