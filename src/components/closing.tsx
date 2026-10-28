@@ -9,7 +9,10 @@ export function Closing() {
       </section>
       <footer className="border-t border-line px-6 py-10 text-sm text-mist">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4">
-          <img src="/brand/vienna-logo-light.svg" alt="Project Vienna" className="h-8 opacity-80" />
+          <span className="flex">
+            <img src="/brand/vienna-logo-light.svg" alt="Project Vienna" className="logo-light h-8 opacity-80" />
+            <img src="/brand/vienna-logo-dark.svg" alt="" aria-hidden className="logo-dark h-8 opacity-80" />
+          </span>
           <p>Project Vienna by Presidio</p>
         </div>
       </footer>
